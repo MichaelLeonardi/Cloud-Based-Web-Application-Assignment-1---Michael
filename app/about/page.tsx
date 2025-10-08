@@ -5,13 +5,12 @@ import { useEffect } from "react";
 export default function AboutPage() {
   const studentName = "Michael Leonardi";
   const studentNumber = "22586733";
-  const videoId = "YuibCvijetw"; // YouTube video ID
+  const videoId = "zu93cJA2BoQ"; 
 
   useEffect(() => {
     try {
       localStorage.setItem("lastVisited", "About");
     } catch {
-      // ignore if localStorage not available
     }
   }, []);
 

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Theme Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -21,7 +20,6 @@
   --shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
 }
 
-/* Global styles */
 html,
 body {
   margin: 0;
@@ -43,7 +41,6 @@ main {
   transition: color 0.3s ease;
 }
 
-/* Utility animations */
 .fade-in {
   animation: fadeIn 0.3s ease-in;
 }
