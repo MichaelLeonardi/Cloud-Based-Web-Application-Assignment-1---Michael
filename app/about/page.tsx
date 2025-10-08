@@ -44,9 +44,9 @@ export default function AboutPage() {
       </section>
 
       <section style={{ marginBottom: 20 }}>
-        <h2 style={{ marginBottom: 8 }}>Project Walkthrough Video</h2>
+        <h2 style={{ marginBottom: 8 }}>My Project Walkthrough Video</h2>
         <p style={{ marginBottom: 12 }}>
-          The video below demonstrates all key features — creating and editing tabs,
+          My video below will demonstrate all of the key features of this assignment such as, creating and editing tabs,
           switching between light and dark mode, and generating inline CSS HTML outputs.
         </p>
 
