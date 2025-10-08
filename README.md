@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+\# Tabs Generator Project  
+**Author:** Michael Leonardi  
+**Student ID:** 22586733  
 
-## Getting Started
+## 📘 Project Overview
+This project was developed for the Web Development Assignment.  
+It demonstrates the use of **React (Next.js)** to create a fully functional web application with multiple features, including a tab generator, light/dark mode, and persistent local storage.
 
-First, run the development server:
+The application allows users to:
+- Create up to **15 tabs**
+- **Rename**, **delete**, and **edit content** inside each tab
+- Automatically **save all tabs and content** in localStorage
+- **Generate standalone HTML code** with inline CSS that recreates the tabs website
+- Switch between **light and dark modes**
+- Navigate using a **header, footer, and hamburger menu**
+- View an **About Page** with student details and embedded project video
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🧩 User Interface (4 Marks)
+- Navigation Bar with tab links  
+- Header and Footer across all pages  
+- About Page including name, student ID, and project video  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🎨 Themes (3 Marks)
+- Fully functional **Light Mode** and **Dark Mode**  
+- Theme choice is saved in **localStorage**  
+- Automatically restores the selected theme when reloaded  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🍔 Hamburger Menu (3 Marks)
+- Includes a hamburger icon on smaller screens  
+- Uses **CSS Transform animations** when opened/closed  
+- Provides links to Home (Tabs page), About, and other pages  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🗂 Tabs Page Operations (6 Marks)
+- Add, rename, and delete tabs  
+- Each tab has its own editable content area  
+- Maximum of **15 tabs** allowed  
+- Tabs and content saved automatically in **localStorage**
 
-## Learn More
+### ⚙️ Output Button (6 Marks)
+- Generates complete **HTML code** that works when pasted into a blank `.html` file  
+- All styles are **inline CSS** (no external files or classes)  
+- Includes simple **JavaScript tab switching** logic  
+- Video demonstration shows **1 tab**, **3 tabs**, and **5 tabs** generated successfully  
 
-To learn more about Next.js, take a look at the following resources:
+### 🌿 GitHub (3 Marks)
+- Several commits made during development  
+- **Three feature branches** created:
+  - `feature/tabs` – Tabs generator  
+  - `feature/about` – About page  
+  - `feature/theme` – Dark/light mode and navigation  
+- **Main branch** contains the final merged version  
+- `node_modules` folder is **excluded** using `.gitignore`  
+- README file is up to date and includes project summary  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Tabs Creation & Management
+```tsx
+const [tabs, setTabs] = useState([]);
+const addTab = () => {
+  if (tabs.length >= 15) return alert("Maximum 15 tabs allowed.");
+  const newTab = { name: tabName, content: "" };
+  setTabs([...tabs, newTab]);
+};
